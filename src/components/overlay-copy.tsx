@@ -1,0 +1,37 @@
+"use client"
+
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
+
+interface OverlayCopyProps {
+  heading: string
+  subHeading: String
+}
+
+export function OverlayCopy({ heading, subHeading }: OverlayCopyProps) {
+  const targetRef = useRef<HTMLDivElement | null>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  })
+
+  const y = useTransform(scrollYProgress, [0, 1], [250, -250])
+
+  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0])
+
+  return (
+    <motion.div
+      ref={targetRef}
+      style={{
+        y,
+        opacity,
+      }}
+      className="absolute top-0 left-0 flex h-screen w-full flex-col items-center justify-center text-white"
+    >
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+        {subHeading}
+      </p>
+      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+    </motion.div>
+  )
+}
