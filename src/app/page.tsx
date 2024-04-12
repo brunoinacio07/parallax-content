@@ -1,4 +1,5 @@
 import { ExampleContent } from "@/components/example-content"
+import { ServiceCards } from "@/components/service-cards"
 import { TextParallaxContent } from "@/components/text-parallax-content"
 
 export default function Home() {
@@ -25,6 +26,8 @@ export default function Home() {
       >
         <ExampleContent />
       </TextParallaxContent>
+
+      <ServiceCards />
     </main>
   )
 }
