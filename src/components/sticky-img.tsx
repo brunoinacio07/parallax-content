@@ -36,7 +36,7 @@ export function StickyImg({ imgUrl }: StickyImgProps) {
         style={{
           opacity,
         }}
-        className="absolute inset-0 bg-neutral-950/60"
+        className="absolute inset-0 bg-neutral-950/70"
       />
     </motion.div>
   )
