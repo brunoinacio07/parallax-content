@@ -6,7 +6,7 @@ import { ServiceCard } from "./service-card"
 
 export function ServiceCards() {
   return (
-    <section className="bg-neutral-50 h-[600px]">
+    <section className="bg-neutral-50 h-[600px] px-4">
       <div className="container mx-auto gap-x-4 gap-y-8 flex flex-col lg:flex-row lg:items-center justify-center h-full">
         <ServiceCard
           title="Painéis de madeira"

@@ -1,4 +1,5 @@
 import { ExampleContent } from "@/components/example-content"
+import { FullViewParallax } from "@/components/full-view-parallax"
 import { ServiceCards } from "@/components/service-cards"
 import { TextParallaxContent } from "@/components/text-parallax-content"
 
@@ -28,6 +29,8 @@ export default function Home() {
       </TextParallaxContent>
 
       <ServiceCards />
+
+      <FullViewParallax />
     </main>
   )
 }
